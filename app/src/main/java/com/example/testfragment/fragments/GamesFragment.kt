@@ -5,9 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.testfragment.R
+import com.example.testfragment.adapter.GameAdapter
+import com.example.testfragment.data.GameDataSource
+import com.example.testfragment.model.Game
 
 class GamesFragment : Fragment() {
+
+    private lateinit var recyclerGames: RecyclerView
+    private val gameAdapter= GameAdapter()
+    private var gameList = listOf<Game>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +31,20 @@ class GamesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_games, container, false)
+        val view =  inflater.inflate(R.layout.fragment_games, container, false)
+
+        recyclerGames = view.findViewById(R.id.recycler_view_games)
+
+        recyclerGames.layoutManager= LinearLayoutManager(view.context)
+
+        recyclerGames.adapter = gameAdapter
+
+        gameList = GameDataSource.getGames(view.context)
+
+        gameAdapter.updateGameList(gameList)
+        return view
+
+
     }
 
 

@@ -14,8 +14,8 @@ class GameDataSource {
                 1,
                 "Mortal Kombat",
                 context.getDrawable(R.drawable.mkt)!!,
-                "Mortal Kombat é bacana :3",
-                4.5,
+                "Mortal Kombat é uma série de jogos criados pelo estúdio de Chicago da Midway Games. Em 2011, depois da falência da Midway, a produção de Mortal Kombat foi adquirida pela Warner Bros, tornando-se em seguida na Netherealm. A Warner detém atualmente os direitos da série",
+                4.5f,
                 listOf(Console(
                     1,
                     "PlayStation 1",
@@ -32,8 +32,8 @@ class GameDataSource {
                 2,
                 "God Of War 3",
                 context.getDrawable(R.drawable.gow3)!!,
-                "God Of War 3 é bacana :3",
-                4.5,
+                "God of War III é um jogo eletrônico de ação-aventura e hack and slash desenvolvido pela Santa Monica Studio e publicado pela Sony Computer Entertainment. Foi lançado em 16 de março de 2010 para PlayStation 3",
+                3.5f,
                 listOf(Console(
                     3,
                     "PlayStation 3",
@@ -45,29 +45,13 @@ class GameDataSource {
                         "Sony",
                         "2013-09-06"))
             ))
+
             games.add(Game(
                 3,
-                "God Of War 3",
-                context.getDrawable(R.drawable.gow3)!!,
-                "God Of War 3 é bacana :3",
-                4.5,
-                listOf(Console(
-                    3,
-                    "PlayStation 3",
-                    "Sony",
-                    "2006-01-01" ),
-                    Console(
-                        4,
-                        "PlayStation 4",
-                        "Sony",
-                        "2013-09-06"))
-            ))
-            games.add(Game(
-                4,
-                "inFamous-Serie",
+                "inFamous Serie",
                 context.getDrawable(R.drawable.infamous)!!,
-                "inFamous é bacana :3",
-                4.5,
+                "Infamous é uma série de videojogos de Acção-aventura e plataformas jogados em mundo aberto, produzido pela Sucker Punch Productions e publicados pela Sony Computer Entertainment de modo exclusivo para o PlayStation 3 e PlayStation 4.",
+                5.0f,
                 listOf(Console(
                     3,
                     "PlayStation 3",
