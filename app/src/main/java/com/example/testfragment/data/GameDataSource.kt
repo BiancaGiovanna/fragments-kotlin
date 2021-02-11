@@ -6,7 +6,7 @@ import com.example.testfragment.model.Console
 import com.example.testfragment.model.Game
 
 class GameDataSource {
-//    companion object é um objeto static
+//    companion object é um object static
     companion object{
         fun getGames(context: Context): ArrayList<Game>{
             var games = ArrayList<Game>()
